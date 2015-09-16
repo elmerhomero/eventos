@@ -1,11 +1,11 @@
 angular.module('eventApp')
-.controller('formCtrl', function($scope){
+.controller('formCtrl', ['eventFactory', '$scope', function(eventFactory, $scope){
 	
 	$scope.event = [];
 
 	$scope.submitForm = function(form){
-		$scope.event.push(angular.copy(form));
+		eventFactory.createEvent(angular.copy(form), $scope.event);
 		console.log($scope.event);
 	}
-})
+} ])
 ;
