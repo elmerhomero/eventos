@@ -1,18 +1,11 @@
-angular.module('myFirstApp')
-.controller('myController', function($scope, personService){
-	$scope.firstName = 'Juan';
-	$scope.lastName = 'Ulises';
+angular.module('eventApp')
+.controller('formCtrl', function($scope){
+	
+	$scope.event = [];
 
-	$scope.printName = function(){
-		return personService.printName($scope.firstName, $scope.lastName);
-	} 
+	$scope.submitForm = function(form){
+		$scope.event.push(angular.copy(form));
+		console.log($scope.event);
+	}
 })
-.controller('AboutCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
-
-	$scope.input = $routeParams.parm1;
-
-}])
-.controller('ContactCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
-	$scope.input = $routeParams.parm2;
-}])
 ;

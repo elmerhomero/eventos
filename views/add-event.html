@@ -1,0 +1,93 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h3>Add Event</h3></div>
+			<div class="panel-body">
+				<form class="form" role="form" id="addEventForm" name="addEventForm"
+						ng-submit="submitForm(eventForm)">
+					
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Name -->
+							<div class="form-group">
+								<label for="eventName" class="control-label">Name</label>
+								<input type="text" class="form-control" name="eventName" placeholder="Event Name"
+										ng-model="eventForm.name">
+								<p class="help-block">The event name</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- Description -->
+							<div class="form-group">
+								<label for="eventDescription" class="control-label">Description</label>
+								<input type="text" class="form-control" name="eventDescription" placeholder="Event Description"
+										ng-model="eventForm.description">
+								<p class="help-block">The event description</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Date -->
+							<div class="form-group">
+								<label for="eventDate" class="control-label">Date</label>
+								<input type="text" class="form-control" name="eventDate" placeholder="Event Date"
+										ng-model="eventForm.date">
+								<p class="help-block">The event date</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- Location -->
+							<div class="form-group">
+								<label for="eventLocation" class="control-label">Location</label>
+								<input type="text" class="form-control" name="eventLocation" placeholder="Event Location"
+										ng-model="eventForm.location">
+								<p class="help-block">The event Location</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Category -->
+							<div class="form-group">
+								<label for="eventCategory" class="control-label">Category</label>
+								<select class="form-control" data-width="100%" name="eventCategory" name="eventCategory"
+										ng-model="eventForm.category">
+								  <option value="one">Category 1</option>
+								  <option value="two">Category 2</option>
+								  <option value="tree">Category 3</option>
+								  <option value="four">Category 4</option>
+								  <option value="five">Category 5</option>
+								</select>
+								<p class="help-block">The event Category</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- Email -->
+							<div class="form-group">
+								<label for="eventEmail" class="control-label">Email</label>
+								<input type="email" class="form-control" name="eventEmail" placeholder="Email info"
+										ng-model="eventForm.email">
+								<p class="help-block">The contact Email</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Submit -->
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="reset" class="btn btn-primary">Reset</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		{{eventForm|json}}
+	</div>
+</div>
