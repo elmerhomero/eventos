@@ -4,6 +4,7 @@ angular.module('eventApp', ['ngRoute'])
 	$routeProvider
 		.when('/add-event', {
 			templateUrl: 'views/add-event.html',
+			controllerAs: 'eventCtl',
 			controller: 'formCtrl'
 		})
 		.otherwise({
