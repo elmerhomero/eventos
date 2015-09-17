@@ -52,7 +52,7 @@
 							<div class="form-group">
 								<label for="eventCategory" class="control-label">Category</label>
 								<select class="form-control" data-width="100%" name="eventCategory" name="eventCategory"
-										ng-model="eventForm.category" ng-options="category.id as category.name group by category.group  for category in eventCtl.categories">
+										ng-model="eventCtl.selectedOption" ng-options="category.name as category.name for category in eventCtl.categories track by category.id">
 								</select>
 								<p class="help-block">The event Category</p>
 							</div>
@@ -104,13 +104,6 @@
 					<td>{{event.date}}</td>
 				</tr>
 			</tbody>
-		</table>
-
-
-		<table class="table table-striped table-hover table-bordered">
-			<tr ng-repeat="event in eventCtl.events track by event.id">
-				<td>{{event.name}}</td>
-			</tr>
 		</table>
 
 	</div>
